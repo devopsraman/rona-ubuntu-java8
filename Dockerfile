@@ -1,6 +1,6 @@
-FROM 192.168.1.178:5000/ubuntu-base
+FROM docker.gillsoft.org/ubuntu-base
 
-MAINTAINER Ronan Gill <ronan.gill@vodafone.com>
+MAINTAINER Ronan Gill <ronan.gill@gillsoft.org>
 
 # RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
 
