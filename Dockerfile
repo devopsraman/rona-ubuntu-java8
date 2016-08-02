@@ -9,7 +9,7 @@ RUN \
   add-apt-repository -y ppa:webupd8team/java
 
 RUN \
-  apt-get update && \
+  apt-get update && DEBIAN_FRONTEND=noninteractive \
   apt-get install -y oracle-java8-installer && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/oracle*
 
@@ -18,7 +18,4 @@ WORKDIR /data
 
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
-
-# Define default command.
-CMD ["bash"]
 
